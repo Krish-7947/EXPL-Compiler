@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+// This is a single-line comment
+int main() {
+    int x = 10; /* This is a 
+                   multi-line*//* comment */
+    // Another single-line comment
+    return 0;
+}

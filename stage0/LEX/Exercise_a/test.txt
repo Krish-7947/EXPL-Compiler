@@ -1,0 +1,18 @@
+Hello World
+This is Lex.
+
+The value of x is 25.
+The value of y is 3.1415.
+
+Apple
+Ant
+Axe
+A1
+ABC
+AB
+APPLE
+
+123
+456
+
+End of file.
