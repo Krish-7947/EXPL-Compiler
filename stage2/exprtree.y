@@ -18,11 +18,10 @@
 {
 	struct tnode *node;
 }
-%token START END READ WRITE PLUS MINUS MUL DIV ASSGN NUM ID
+%token <node> START END READ WRITE PLUS MINUS MUL DIV ASSGN NUM ID
 %left PLUS MINUS
 %left MUL DIV
 
-%type <node> NUM ID START END READ WRITE PLUS MINUS MUL DIV ASSGN
 %type <node> program Slist Stmt InputStmt OutputStmt AsgStmt expr
 
 %%
