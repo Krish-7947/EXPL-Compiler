@@ -107,7 +107,7 @@ int yywrap(void) {
        return 0;
     }
 
-    remove("target.xsm");
+    // remove("target.xsm");
     return 1;
 }
 
