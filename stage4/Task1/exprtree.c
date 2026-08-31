@@ -5,7 +5,7 @@ struct tnode* createTree(int type, int val, int nodetype, char* name, struct tno
     temp->type = type;
     temp->nodetype = nodetype;
     if (name != NULL) {
-        temp->varname = (char *)malloc(sizeof(name));
+        temp->varname = (char *)malloc(strlen(name) + 1);
         strcpy(temp->varname, name);
     }
     temp->left = l;

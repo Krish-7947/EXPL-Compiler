@@ -22,7 +22,7 @@ void GInstall(char *name, int type, int size) {
     }
 
     temp = (struct Gsymbol *)malloc(sizeof(struct Gsymbol));
-    temp->name = (char*)malloc(sizeof(name));
+    temp->name = (char*)malloc(strlen(name) + 1);
     strcpy(temp->name, name);
     temp->type = type;
     temp->size = size;
