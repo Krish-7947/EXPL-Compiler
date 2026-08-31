@@ -48,13 +48,13 @@ str \"(\\.|[^\\\"])*\"
 "%"         {return MOD;}
 "="         {return ASSGN;}
 {id}        {
-                variable = (char*)malloc(sizeof(yytext));
+                variable = (char*)malloc(strlen(yytext) + 1);
                 strcpy(variable, yytext);
                 yylval.node = createTree(TYPE_INT, 0, NODE_ID, variable, NULL, NULL, NULL);
                 return ID;
             }
 {str}       {
-                variable = (char*)malloc(sizeof(yytext));
+                variable = (char*)malloc(strlen(yytext) + 1);
                 strcpy(variable, yytext);
                 yylval.node = createTree(TYPE_STR, 0, NODE_STRVAL, variable, NULL, NULL, NULL);
                 return STRVAL;
