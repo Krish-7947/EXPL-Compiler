@@ -1,0 +1,39 @@
+decl
+    int x, y, z;
+    int *p, *q, *r;
+enddecl
+
+begin
+
+    x = 10;
+    y = 20;
+    z = 0;
+
+    p = &x;
+    q = &y;
+    r = &z;
+
+    write(x);
+    write(y);
+    write(z);
+
+    write(*p);
+    write(*q);
+    write(*r);
+
+    *r = *p + *q;
+
+    write(z);
+    write(*r);
+
+    *p = *q + 5;
+
+    write(x);
+    write(*p);
+
+    read(*r);
+
+    write(z);
+    write(*r);
+
+end
