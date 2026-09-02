@@ -9,7 +9,7 @@ gcc y.tab.c lex.yy.c -o compiler
 
 echo "4. Creating target.xsm..."
 # ./compiler hello.txt
-./compiler test.txt
+./compiler mul.txt
 
 echo "5. Compiling and running ltranslate to create final machine code..."
 lex ltranslate.l
