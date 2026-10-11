@@ -1,0 +1,45 @@
+decl
+    int arr[3];
+    int swap(int *p, int *q);
+    int *maxp(int *a, int *b);
+enddecl
+int swap(int *p, int *q) {
+    decl int t; enddecl
+    begin
+        t = *p;
+        *p = *q;
+        *q = t;
+        return 1;
+    end
+}
+int *maxp(int *a, int *b) {
+    decl int *r; enddecl
+    begin
+        if (*a > *b) then
+            r = a;
+        else
+            r = b;
+        endif;
+        return r;
+    end
+}
+int main() {
+    decl int x, y, d, *m; enddecl
+    begin
+        x = 10;
+        y = 20;
+        arr[0] = 5;
+        arr[1] = 8;
+        d = swap(&x, &y);
+        write(x);
+        write(y);
+        swap(&arr[0], &arr[1]);
+        write(arr[0]);
+        write(arr[1]);
+        m = maxp(&x, &y);
+        *m = 0;
+        write(x);
+        write(y);
+        return 0;
+    end
+}

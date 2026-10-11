@@ -1,0 +1,22 @@
+decl
+    int swap(int *p, int *q);
+enddecl
+int swap(int *p, int *q) {
+    decl int t; enddecl
+    begin
+        t = *p;
+        *p = *q;
+        *q = t;
+        return 1;
+    end
+}
+int main() {
+    decl int x, y, d; enddecl
+    begin
+        x = 10; y = 20;
+        d = swap(&x, &y);
+        write(x);
+        write(y);
+        return 0;
+    end
+}
