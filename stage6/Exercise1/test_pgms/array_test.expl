@@ -1,0 +1,36 @@
+type
+  Student { int roll; int marks; }
+endtype
+decl
+  Student s[5];
+  int i, n, best;
+enddecl
+int main() {
+begin
+  initialize();
+  read(n);
+  i = 0;
+  while (i < n) do
+    s[i] = alloc();
+    read(s[i].roll);
+    read(s[i].marks);
+    i = i + 1;
+  endwhile;
+  best = 0;
+  i = 1;
+  while (i < n) do
+    if (s[i].marks > s[best].marks) then
+      best = i;
+    endif;
+    i = i + 1;
+  endwhile;
+  write(s[best].roll);
+  write(s[best].marks);
+  i = 0;
+  while (i < n) do
+    free(s[i]);
+    i = i + 1;
+  endwhile;
+  return 0;
+end
+}
