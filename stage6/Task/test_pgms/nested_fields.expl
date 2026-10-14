@@ -1,0 +1,59 @@
+type
+  linkedList {
+    int data; 
+    linkedList next;  
+  }
+  
+  markList {
+    str name;  
+    linkedList marks; 
+  }
+endtype
+
+decl
+  markList student;
+enddecl
+
+int main()
+{
+  decl
+    int val;
+  enddecl
+
+  begin
+    initialize();
+    
+    student = alloc();
+    student.name = "Krih";
+    
+    student.marks = alloc();
+    student.marks.data = 95;
+    
+    student.marks.next = alloc();
+    student.marks.next.data = 88;
+    
+    student.marks.next.next = alloc();
+    student.marks.next.next.data = 92;
+    student.marks.next.next.next = NULL;
+
+    write("Student:");
+    write(student.name);
+    
+    write("Marks 1:");
+    write(student.marks.data);
+    
+    write("Marks 2:");
+    write(student.marks.next.data);
+    
+    write("Marks 3:");
+    write(student.marks.next.next.data);
+
+    if (student.marks.data > student.marks.next.data) then
+        write("Improved!");
+    else
+        write("Dropped!");
+    endif;
+
+    return 0;
+  end
+}

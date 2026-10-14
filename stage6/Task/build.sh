@@ -8,7 +8,7 @@ echo "3. Compiling C files..."
 gcc y.tab.c lex.yy.c -o compiler
 
 echo "4. Creating target.xsm..."
-./compiler test_pgms/TP4_Extended_Euclid_UDT.expl
+./compiler test_pgms/nested_fields.expl
 
 echo "5. Compiling and running ltranslate to create final machine code..."
 lex ltranslate.l
